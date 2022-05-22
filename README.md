@@ -1,2 +1,2 @@
 # Agneepradeep-Verma
-Config files for my GitHub profile.
+Uploading various projects including presentations, daily usage Python programmes & Document projects etc.
