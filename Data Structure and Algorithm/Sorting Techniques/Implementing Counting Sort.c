@@ -1,4 +1,4 @@
-/*Implementing Selection Sort*/
+/*Implementing Counting Sort*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,8 +6,7 @@
 /*Function Prototypes*/
 void ReadElements(int [],int);
 void DisplayArray(int [],int);
-void SelectionSort(int [],int);
-void Swap(int *,int *);
+void CountingSort(int [],int);
 
 int main(){
     int *ArrayPointer;
@@ -23,7 +22,7 @@ int main(){
     printf("\nUnsorted Array :");
     DisplayArray(ArrayPointer,Size);
 
-    SelectionSort(ArrayPointer,Size);
+    CountingSort(ArrayPointer,Size);
 
     printf("\nSorted Array :");
     DisplayArray(ArrayPointer,Size);
@@ -56,29 +55,49 @@ void DisplayArray(int A[],int S){
     printf("}");
 }
 
-void SelectionSort(int A[],int S){
-    int i = 0,j,k;
-    int Min;
+void CountingSort(int A[],int S){
+    int MaxElement,i,j,Sum;
+    MaxElement = A[0];
+    i = 1;
     while (i != S){
-        Min = A[i];
-        j = i + 1;
-        k = j;
-        while (j != S){
-            if (Min > A[j]){
-                Min = A[j];
-                k = j;
-            }
-            j = j + 1;
-        }
-        if (A[i] > A[k]){
-            Swap(A+i,A+k);
+        if (MaxElement < A[i]){
+            MaxElement = A[i];
         }
         i = i + 1;
     }
-}
 
-void Swap(int *A,int *B){
-    *A = *A + *B;
-    *B = *A - *B;
-    *A = *A - *B;
+    int CountArray[MaxElement + 1];
+    i = 0;
+    while (i != MaxElement + 1){
+        CountArray[i] = 0;
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i != S){
+        CountArray[A[i]] += 1;
+        i = i + 1;
+    }
+
+    Sum = CountArray[0];
+    i = 1;
+    while (i != MaxElement + 1){
+        Sum += CountArray[i];
+        CountArray[i] = Sum;
+        i = i + 1; 
+    }
+
+    int B[S];
+    i = 0;
+    while (i != S){
+        CountArray[A[i]] -= 1;
+        B[CountArray[A[i]]] = A[i];
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i != S){
+        A[i] = B[i];
+        i = i + 1;
+    }
 }

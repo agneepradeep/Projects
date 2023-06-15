@@ -1,56 +1,79 @@
+/*Implementing Bubble Sort*/
+
 #include <stdio.h>
-void swap(int *,int*);
+#include <stdlib.h>
+
+/*Function Prototypes*/
+void ReadElements(int [],int);
+void DisplayArray(int [],int);
+void BubbleSort(int [],int);
+void Swap(int *,int *);
+
 int main(){
-	int size;
-	printf("Type Array Size :");
-	scanf("%d",&size);
-	int Arr[size],i;
-	i = 0;
-	while (i != size){
-		scanf("%d",&Arr[i]);
-		i = i + 1;
-	}
-	
-	/*Printing Unsorted Array*/
-	printf("\nUnsorted Array :{");
-	for (i=0;i<size;i++){
-		if (i != size -1){
-		printf("%d, ",Arr[i]);
-		}
-		else{
-			printf("%d",Arr[i]);
-		}
-	}
-	printf("}");
-	
-	/*Implementing Bubble Sort*/
-	int Swapping = 0;
-	do{
-		Swapping = 0;
-		for (i = 0;i<(size-1);i++){
-			if (Arr[i] > Arr[i+1]){
-				swap((Arr + i),(Arr + i + 1));
- 				Swapping = Swapping + 1;
-			}
-		}
-	}while (Swapping != 0);
-	
-	/*Printing the Sorted Array*/
-	printf("\nSorted Array :{");
-	for (i=0;i<size;i++){
-		if (i != size -1){
-		printf("%d, ",Arr[i]);
-		}
-		else{
-			printf("%d",Arr[i]);
-		}
-	}
-	printf("}");
-	return 0;
+    int *ArrayPointer;
+    int Size;
+
+    printf("Type Array Size :");
+    scanf("%d",&Size);
+
+    ArrayPointer = (int *)malloc(sizeof(int)*Size);
+
+    ReadElements(ArrayPointer,Size);
+
+    printf("\nUnsorted Array :");
+    DisplayArray(ArrayPointer,Size);
+
+    BubbleSort(ArrayPointer,Size);
+
+    printf("\nSorted Array :");
+    DisplayArray(ArrayPointer,Size);
+
+    return 0;
 }
 
-void swap(int *x,int *y){
-	*x = *x + *y;
-	*y = *x - *y;
-	*x = *x - *y;
+void ReadElements(int A[],int S){
+    int i,E;
+    while (i != S){
+        printf("%dth Element :",i);
+        scanf("%d",&E);
+        A[i] = E;
+        i = i + 1;
+    }
+}
+
+void DisplayArray(int A[],int S){
+    int i;
+    printf("{");
+    while (i != S){
+        if(i == S-1){
+            printf("%d",A[i]);
+        }
+        else{
+            printf("%d, ",A[i]);
+        }
+        i = i + 1;
+    }
+    printf("}");
+}
+
+void BubbleSort(int A[],int S){
+    int i,SwapCount;
+
+    do{
+        i = 0;
+        SwapCount = 0;
+        while (i != S-1){
+            if (A[i] > A[i + 1]){
+                Swap(A+i,A+i+1);
+                SwapCount += 1;
+            }
+            i = i + 1;
+        }
+    }while (SwapCount != 0);
+}
+
+void Swap(int *A,int *B){
+    *A = *A + *B;
+    *B = *A - *B;
+    *A = *A - *B;
 }

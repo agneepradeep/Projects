@@ -1,4 +1,4 @@
-/*Implementing Selection Sort*/
+/*Implementing Quick Sort*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,7 +6,8 @@
 /*Function Prototypes*/
 void ReadElements(int [],int);
 void DisplayArray(int [],int);
-void SelectionSort(int [],int);
+void QuickSort(int [],int,int);
+int Partition(int [],int,int);
 void Swap(int *,int *);
 
 int main(){
@@ -23,7 +24,7 @@ int main(){
     printf("\nUnsorted Array :");
     DisplayArray(ArrayPointer,Size);
 
-    SelectionSort(ArrayPointer,Size);
+    QuickSort(ArrayPointer,0,Size-1);
 
     printf("\nSorted Array :");
     DisplayArray(ArrayPointer,Size);
@@ -56,29 +57,32 @@ void DisplayArray(int A[],int S){
     printf("}");
 }
 
-void SelectionSort(int A[],int S){
-    int i = 0,j,k;
-    int Min;
-    while (i != S){
-        Min = A[i];
-        j = i + 1;
-        k = j;
-        while (j != S){
-            if (Min > A[j]){
-                Min = A[j];
-                k = j;
-            }
-            j = j + 1;
-        }
-        if (A[i] > A[k]){
-            Swap(A+i,A+k);
-        }
-        i = i + 1;
+void QuickSort(int A[],int L,int H){
+    int PI;
+    if (L<H){
+        PI = Partition(A,L,H);
+        QuickSort(A,L,PI - 1);
+        QuickSort(A,PI+1,H);
     }
 }
 
+int Partition(int A[],int S,int E){
+    int Pivot = A[E];
+    int I = S-1;
+    int j;
+
+    for(j = S;j<=E-1;j++){
+        if (A[j] < Pivot){
+            I = I + 1;
+            Swap(A+I,A+j);
+        }
+    }
+    Swap(A+I+1,A+E);
+    return (I+1);
+}
+
 void Swap(int *A,int *B){
-    *A = *A + *B;
-    *B = *A - *B;
-    *A = *A - *B;
+    int T = *A;
+    *A = *B;
+    *B = T;
 }
