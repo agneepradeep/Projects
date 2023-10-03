@@ -1,4 +1,3 @@
-package exceptionHandling;
 public class Calculator {
     /**
      * Main method
