@@ -1,5 +1,3 @@
-package exceptionHandling;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Exercise12_02 {
