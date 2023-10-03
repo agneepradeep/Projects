@@ -1,4 +1,3 @@
-package exceptionHandling;
 public class Exercise12_04 { /**Loan Class*/
     private double annualInterestRate;
     private int numberOfYears;

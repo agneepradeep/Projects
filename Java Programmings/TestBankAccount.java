@@ -1,5 +1,3 @@
-package exceptionHandling;
-
 class NegativeAmountException extends Exception{
     NegativeAmountException(String Message){
         super(Message);
