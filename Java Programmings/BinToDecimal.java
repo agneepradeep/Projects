@@ -1,4 +1,3 @@
-package exceptionHandling;
 import java.lang.Math;
 public class BinToDecimal {
     final private String Binary;
