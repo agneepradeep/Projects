@@ -5,7 +5,7 @@ putstu() are the methods to read and display the id and name.
 •	The intermediate class named Marks with data members m1, m2, m3 and getmarks()
 and putmarks() are the methods to read and display the marks.
 •	The derived class named Result with total, and average as a data member and show() as
-•	the method to display the total and average marks.                          (MODULE 6 - EASY) 
+•	the method to display the total and average marks.                        
 */
 
 #include <iostream>
