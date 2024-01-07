@@ -1,5 +1,3 @@
-# GitHub Repository Readme
-
 ## Welcome to agneepradeep's Repository
 
 ### Overview
