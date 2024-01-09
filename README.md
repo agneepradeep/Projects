@@ -16,20 +16,18 @@ This repository contains various programs implemented in Java, Python, Verilog, 
 
 ### Java Programs
 
-- [**Program 1:**](Java/Program1.java) Brief description of Program 1 in Java.
-- [**Program 2:**](Java/Program2.java) Brief description of Program 2 in Java.
-- ...
-
-### Python Programs
-
-- [**Program 1:**](Python/Program1.py) Brief description of Program 1 in Python.
-- [**Program 2:**](Python/Program2.py) Brief description of Program 2 in Python.
+- [**BinToDecimal:**]([Java/Program1.java](https://github.com/agneepradeep/Projects/blob/main/Java%20Programmings/BinToDecimal.java)) Converts Binary Number to Decimal Numbers.
+- [**Calculator:**]([Java/Program2.java](https://github.com/agneepradeep/Projects/blob/main/Java%20Programmings/Calculator.java)) Demonstration of Simple Calculator using Command Line in Java.
+- [**Tic Tac Toe:**](https://github.com/agneepradeep/Projects/blob/main/Java%20Programmings/TicTacToe.java) Tic Tac Toe Game Developed in Java.
 - ...
 
 ### Verilog Programs
 
-- [**Program 1:**](Verilog/Program1.v) Brief description of Program 1 in Verilog.
-- [**Program 2:**](Verilog/Program2.v) Brief description of Program 2 in Verilog.
+- [**Adders and Substractors:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Adders%20and%20Substractors) Directory Includes Full Adder, Full Substractor, Half Adder, Half Substractor and their constructions using Decoder, Multiplexer and Demultiplexer
+- [**Counters:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Counters) Directory Includes Regular Counters Like Up Counter, Down Counter and Special Counter Like Johnson Counter and Ring Counter
+- [**Flip Flops and Latches:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Flip%20Flops%20and%20Latches) Directory Includes SR Latch, SR Flip Flop, D Flip Flop, JK Flip Flop & T Flip Flop.
+- [**Mux, Demux, Encoder, Decoder & Comparator:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Mux%2C%20Demux%2C%20Encoder%2C%20Decoder%20%26%20Comparator) Directory Includes 4-bit Comparator, Multiplexer, encoder etc are build using Behavioural Model along with their test benches.
+- [**Shift Registers:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Shift%20Registers)It Includes All Shift Registers i.e, SISO, SIPO, PISO & PIPO.
 - ...
 
 ### C Programs
