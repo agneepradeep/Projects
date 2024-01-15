@@ -30,30 +30,6 @@ This repository contains various programs implemented in Java, Python, Verilog, 
 - [**Shift Registers:**](https://github.com/agneepradeep/Projects/tree/main/Verilog%20Programming/Shift%20Registers)It Includes All Shift Registers i.e, SISO, SIPO, PISO & PIPO.
 - ...
 
-### C Programs
-
-- [**Program 1:**](C/Program1.c) Brief description of Program 1 in C.
-- [**Program 2:**](C/Program2.c) Brief description of Program 2 in C.
-- ...
-
-### C++ Programs
-
-- [**Program 1:**](Cpp/Program1.cpp) Brief description of Program 1 in C++.
-- [**Program 2:**](Cpp/Program2.cpp) Brief description of Program 2 in C++.
-- ...
-
-### MATLAB Programs
-
-- [**Program 1:**](MATLAB/Program1.m) Brief description of Program 1 in MATLAB.
-- [**Program 2:**](MATLAB/Program2.m) Brief description of Program 2 in MATLAB.
-- ...
-
-### Data Structures and Algorithms
-
-- [**Data Structure 1:**](DataStructures/DS1.java) Brief description of Data Structure 1.
-- [**Algorithm 1:**](Algorithms/Algorithm1.py) Brief description of Algorithm 1.
-- ...
-
 ### Contributions
 
 If you find any issues or improvements, feel free to contribute by submitting a pull request. Your contributions are highly appreciated!
