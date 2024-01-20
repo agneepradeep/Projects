@@ -22,7 +22,7 @@ int main(){
 	printf("\n4.Display No. of Elements in Stack.");
 	printf("\n5.Change Element at Given Position.");
 	printf("\n6.Display Entire Stack.");
-	printf("\n7.Exit.\n")
+	printf("\n7.Exit.\n");
 	
 	int Element;
 	while (1){
@@ -35,7 +35,7 @@ int main(){
 				Status = push(Element,Stack,Top);
 				((Status == 0)?printf("Stack is Full"):printf("Push Operation Successfull"));
 			case 2:
-				Status = pop(Stack,Top)
+				Status = pop(Stack,Top);
 				((Status == 0)?printf("Stack Empty"):printf("Element Popped"));
 			case 3:
 			case 4:
@@ -48,6 +48,5 @@ int main(){
 			break;
 		}
 	}
-	return 
+	return;
 }
-
