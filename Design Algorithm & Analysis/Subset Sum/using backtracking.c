@@ -55,11 +55,17 @@ void SubsetSum(struct modifiedArray R[], int M,int Sum,int index,int Size){
     }
 }
 
-void printSubset(struct modifiedArray P[],int size){
+void printSubset(struct modifiedArray P[], int size) {
+    int hasElement = 0; // To check if there is at least one element in the subset
+
     printf("{");
-    for(int i = 0;i<size;i++){
-        if (P[i].s == 1){
-            printf(" %d,",P[i].x);
+    for (int i = 0; i < size; i++) {
+        if (P[i].s == 1) {
+            if (hasElement == 1) {
+                printf(", ");
+            }
+            printf("%d", P[i].x);
+            hasElement = 1;
         }
     }
     printf("}\n");
