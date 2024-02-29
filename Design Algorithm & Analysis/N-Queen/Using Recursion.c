@@ -8,8 +8,11 @@ bool nQueen(int* Q,int,int,int);
 bool checkPosition(int* Q,int,int,int);
 bool feasible(int,int,int,int);
 
+/**Global Variable to count no. of Solutions*/
+int solutionCount = 0;
+
 int main() {
-    int size = 4;
+    int size = 5;
     int *Queen = (int *)malloc(size * size * sizeof(int));
 
     for (int i = 0; i < size; i++) {
@@ -18,9 +21,7 @@ int main() {
         }
     }
 
-    if (nQueen(Queen, size, 0, 0)) {
-        printQueenBoard(Queen, size);
-    } else {
+    if (!nQueen(Queen, size, 0, 0) && (!solutionCount)) {
         printf("No solution found.\n");
     }
 
@@ -31,7 +32,7 @@ int main() {
 
 bool nQueen(int* Q,int S,int x,int y){
     if(x == S){
-        return true;
+        printQueenBoard(Q, S);
     }
     
     for(int i = 0;i<S;i++){
@@ -81,5 +82,9 @@ void printQueenBoard(int* Q,int S){
         }
         printf("\n");
     }
+    printf("\n");
+    
+    solutionCount++;
+    
     return;
 }
