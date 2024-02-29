@@ -76,6 +76,8 @@ bool feasible(int R1,int C1,int R2,int C2){
 }
 
 void printQueenBoard(int* Q,int S){
+    solutionCount++;
+    printf("Solution No: %d\n",solutionCount);
     for(int i = 0;i<S;i++){
         for(int j = 0;j<S;j++){
             printf("%d ",*((Q+i*S)+j));
@@ -83,8 +85,5 @@ void printQueenBoard(int* Q,int S){
         printf("\n");
     }
     printf("\n");
-    
-    solutionCount++;
-    
     return;
 }
