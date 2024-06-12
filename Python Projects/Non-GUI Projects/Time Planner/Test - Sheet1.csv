@@ -1,0 +1,6 @@
+Work Name,Expected Dealine,Actual Time to Submit,Expected Time to Complete,Recurring Task,Degree of Importance,Amount of Time to Give
+Task A,2024-06-20,2:00 PM,5,No,Very Important,2
+Task B,2024-06-12,9:00 AM,2,Yes,Less Important,1
+Task C,2024-06-25,5:00 PM,1,No,Neutral,1
+Task D,2024-06-15,12:00 PM,4,No,Very Important,2
+Task E,2024-06-22,4:00 PM,3,Yes,Neutral,1
